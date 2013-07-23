@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F1A0916C-3232-4C2E-B52B-368955AA4C62}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.60315.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../tnl;../glut;../openal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;TNL_ENABLE_LOGGING;TNL_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dsound.lib;dxguid.lib;dinput8.lib;dinput.lib;../openal/OpenAL32.lib;../openal/alut.lib;wsock32.lib;../glut/glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../exe/ZAPd.exe</OutputFile>
+      <AdditionalLibraryDirectories>../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)ZAP.pdb</ProgramDatabaseFile>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../tnl;../glut;../openal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;TNL_ENABLE_LOGGING;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>dsound.lib;dxguid.lib;dinput8.lib;dinput.lib;../openal/OpenAL32.lib;../openal/alut.lib;wsock32.lib;../glut/glut32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../exe/ZAP.exe</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="..\exe\levels\ctf1.txt" />
+    <Text Include="..\exe\levels\ctf2.txt" />
+    <Text Include="..\exe\levels\ctf3.txt" />
+    <Text Include="..\exe\levels\ctf4.txt" />
+    <Text Include="..\exe\levels\football1.txt" />
+    <Text Include="..\exe\levels\football2.txt" />
+    <Text Include="..\exe\levels\football3.txt" />
+    <Text Include="..\exe\levels\football4.txt" />
+    <Text Include="..\exe\levels\football5.txt" />
+    <Text Include="..\exe\levels\hunters1.txt" />
+    <Text Include="..\exe\levels\hunters2.txt" />
+    <Text Include="..\exe\levels\level2.txt" />
+    <Text Include="..\exe\levels\level8.txt" />
+    <Text Include="..\exe\levels\level9.txt" />
+    <Text Include="..\exe\levels\rabbit1.txt" />
+    <Text Include="..\exe\levels\rabbit2.txt" />
+    <Text Include="..\exe\levels\retrieve1.txt" />
+    <Text Include="..\exe\levels\retrieve2.txt" />
+    <Text Include="..\exe\levels\retrieve3.txt" />
+    <Text Include="..\exe\levels\soccer1.txt" />
+    <Text Include="..\exe\levels\soccer2.txt" />
+    <Text Include="..\exe\levels\zm1.txt" />
+    <Text Include="..\exe\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="loadoutSelect.cpp" />
+    <ClCompile Include="quickChat.cpp" />
+    <ClCompile Include="UI.cpp" />
+    <ClCompile Include="UICredits.cpp" />
+    <ClCompile Include="UIEditor.cpp" />
+    <ClCompile Include="UIGame.cpp" />
+    <ClCompile Include="UIInstructions.cpp" />
+    <ClCompile Include="UIMenus.cpp" />
+    <ClCompile Include="UINameEntry.cpp" />
+    <ClCompile Include="UIQueryServers.cpp" />
+    <ClCompile Include="gsm_decode.c" />
+    <ClCompile Include="gsm_encode.c" />
+    <ClCompile Include="gsm_state.c" />
+    <ClCompile Include="lpc10dec.c" />
+    <ClCompile Include="lpc10enc.c" />
+    <ClCompile Include="sfx.cpp" />
+    <ClCompile Include="voiceCodec.cpp" />
+    <ClCompile Include="barrier.cpp" />
+    <ClCompile Include="engineeredObjects.cpp" />
+    <ClCompile Include="flagItem.cpp" />
+    <ClCompile Include="gameItems.cpp" />
+    <ClCompile Include="gameObject.cpp" />
+    <ClCompile Include="gameObjectRender.cpp" />
+    <ClCompile Include="gameWeapons.cpp" />
+    <ClCompile Include="goalZone.cpp" />
+    <ClCompile Include="item.cpp" />
+    <ClCompile Include="LoadoutZone.cpp" />
+    <ClCompile Include="moveObject.cpp" />
+    <ClCompile Include="projectile.cpp" />
+    <ClCompile Include="ship.cpp" />
+    <ClCompile Include="SweptEllipsoid.cpp" />
+    <ClCompile Include="teleporter.cpp" />
+    <ClCompile Include="CTFGame.cpp" />
+    <ClCompile Include="footballGame.cpp" />
+    <ClCompile Include="gameType.cpp" />
+    <ClCompile Include="HTFGame.cpp" />
+    <ClCompile Include="huntersGame.cpp" />
+    <ClCompile Include="rabbitGame.cpp" />
+    <ClCompile Include="retrieveGame.cpp" />
+    <ClCompile Include="soccerGame.cpp" />
+    <ClCompile Include="controlObjectConnection.cpp" />
+    <ClCompile Include="game.cpp" />
+    <ClCompile Include="gameConnection.cpp" />
+    <ClCompile Include="gameLoader.cpp" />
+    <ClCompile Include="gameNetInterface.cpp" />
+    <ClCompile Include="gridDB.cpp" />
+    <ClCompile Include="input.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="masterConnection.cpp" />
+    <ClCompile Include="..\master\masterInterface.cpp" />
+    <ClCompile Include="sparkManager.cpp" />
+    <ClCompile Include="winJoystick.cpp" />
+    <ClCompile Include="winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="loadoutSelect.h" />
+    <ClInclude Include="quickChat.h" />
+    <ClInclude Include="UI.h" />
+    <ClInclude Include="UICredits.h" />
+    <ClInclude Include="UIEditor.h" />
+    <ClInclude Include="UIGame.h" />
+    <ClInclude Include="UIInstructions.h" />
+    <ClInclude Include="UIMenus.h" />
+    <ClInclude Include="UINameEntry.h" />
+    <ClInclude Include="UIQueryServers.h" />
+    <ClInclude Include="gsm.h" />
+    <ClInclude Include="lpc10.h" />
+    <ClInclude Include="sfx.h" />
+    <ClInclude Include="barrier.h" />
+    <ClInclude Include="engineeredObjects.h" />
+    <ClInclude Include="flagItem.h" />
+    <ClInclude Include="gameObject.h" />
+    <ClInclude Include="gameObjectRender.h" />
+    <ClInclude Include="gameWeapons.h" />
+    <ClInclude Include="goalZone.h" />
+    <ClInclude Include="item.h" />
+    <ClInclude Include="moveObject.h" />
+    <ClInclude Include="projectile.h" />
+    <ClInclude Include="ship.h" />
+    <ClInclude Include="shipItems.h" />
+    <ClInclude Include="SweptEllipsoid.h" />
+    <ClInclude Include="teleporter.h" />
+    <ClInclude Include="voiceCodec.h" />
+    <ClInclude Include="CTFGame.h" />
+    <ClInclude Include="gameType.h" />
+    <ClInclude Include="huntersGame.h" />
+    <ClInclude Include="rabbitGame.h" />
+    <ClInclude Include="soccerGame.h" />
+    <ClInclude Include="controlObjectConnection.h" />
+    <ClInclude Include="game.h" />
+    <ClInclude Include="gameConnection.h" />
+    <ClInclude Include="gameLoader.h" />
+    <ClInclude Include="gameNetInterface.h" />
+    <ClInclude Include="..\glut\glDedicated.h" />
+    <ClInclude Include="gridDB.h" />
+    <ClInclude Include="input.h" />
+    <ClInclude Include="masterConnection.h" />
+    <ClInclude Include="move.h" />
+    <ClInclude Include="point.h" />
+    <ClInclude Include="resource2.h" />
+    <ClInclude Include="sparkManager.h" />
+    <ClInclude Include="timer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\exe\bot.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ZAP.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="zap_win_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libtomcrypt\libtomcrypt.vcxproj">
+      <Project>{3f7f7b79-4473-4cab-a54e-4274a9f1a01a}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\tnl\tnl.vcxproj">
+      <Project>{5faf4911-1da7-44fe-9da1-49ae25b11250}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

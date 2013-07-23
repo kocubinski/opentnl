@@ -1,0 +1,81 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "tnl", "tnl\tnl.vcxproj", "{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TNLTest", "test\TNLTest.vcxproj", "{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "server", "test\server.vcxproj", "{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtomcrypt", "libtomcrypt\libtomcrypt.vcxproj", "{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "master", "master\master.vcxproj", "{CE4F0113-8119-491D-BCBE-20F5C3A555FC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "masterclient", "masterclient\masterclient.vcxproj", "{F931A5FA-FF37-4977-8493-786AFD5D71EC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ZAP", "zap\ZAP.vcxproj", "{F1A0916C-3232-4C2E-B52B-368955AA4C62}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug Xbox|Win32 = Debug Xbox|Win32
+		Debug|Win32 = Debug|Win32
+		Release Xbox|Win32 = Release Xbox|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Debug|Win32.Build.0 = Debug|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Release Xbox|Win32.Build.0 = Release|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Release|Win32.ActiveCfg = Release|Win32
+		{5FAF4911-1DA7-44FE-9DA1-49AE25B11250}.Release|Win32.Build.0 = Release|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Release Xbox|Win32.Build.0 = Release|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Release|Win32.ActiveCfg = Release|Win32
+		{2BF337F1-B812-4324-A9BA-E4D580C8CFF1}.Release|Win32.Build.0 = Release|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Release Xbox|Win32.Build.0 = Release|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Release|Win32.ActiveCfg = Release|Win32
+		{2BC8A06B-B9E6-4C92-9E10-6B5E37CBFF96}.Release|Win32.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Debug|Win32.Build.0 = Debug|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release Xbox|Win32.Build.0 = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release|Win32.ActiveCfg = Release|Win32
+		{3F7F7B79-4473-4CAB-A54E-4274A9F1A01A}.Release|Win32.Build.0 = Release|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Release Xbox|Win32.Build.0 = Release|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Release|Win32.ActiveCfg = Release|Win32
+		{CE4F0113-8119-491D-BCBE-20F5C3A555FC}.Release|Win32.Build.0 = Release|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Release Xbox|Win32.Build.0 = Release|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Release|Win32.ActiveCfg = Release|Win32
+		{F931A5FA-FF37-4977-8493-786AFD5D71EC}.Release|Win32.Build.0 = Release|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Debug Xbox|Win32.ActiveCfg = Debug|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Debug Xbox|Win32.Build.0 = Debug|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Debug|Win32.Build.0 = Debug|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Release Xbox|Win32.ActiveCfg = Release|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Release Xbox|Win32.Build.0 = Release|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Release|Win32.ActiveCfg = Release|Win32
+		{F1A0916C-3232-4C2E-B52B-368955AA4C62}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
