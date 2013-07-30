@@ -30,10 +30,21 @@ On the **client** (in response to above):
     void NetConnection::onConnectionEstablished()
     void NetInterface::handleConnectAccept(const Address &address, BitStream *stream)
 
-NetInterface keeps a list of all NetConnections
-There is one NetConnection for each client.  Thus, a server has one NetInterface and many 
-NetConnections, while a client has one NetInterface and one NetConnection (the connection 
-to the server).  
+`NetInterface` keeps a list of all `NetConnection`s. There is one `NetConnection` for each client.
+Thus, a server has one `NetInterface` and many `NetConnection`s, while a client has one
+`NetInterface` and one `NetConnection` (the connection to the server).  Each `GhostConnection`
+is bidirectional, and each side tracks a list of all ghosts:
+
+    /// Array of GhostInfo structures used to track all the objects ghosted 
+    /// by this side of the connection.
+    /// For efficiency, ghosts are stored in three segments - the first segment contains GhostInfos
+    /// that have pending updates, the second ghostrefs that need no updating, and last, free
+    /// GhostInfos that may be reused.   
+    GhostInfo **mGhostArray;   
+
+The list is updated continuously depending on what objects are in scope.  So a player moves
+into scope, gets a particular ID, moves out of scope, and moves back in - that player will
+mostly likely not have the same id.
 
 NetInterface only handles packets relating to establishing connections or pinging.
 NetInterface::processPacket dispatches the a non game info or connection packet to the 
@@ -82,9 +93,9 @@ we ensure that state updates from one `GhostConnection` get updated in every oth
 
 So the bit mask gets set, but what consumes it? In `NetObject`:
 
-       static NetObject *mDirtyList;
-       NetObject *mPrevDirtyList;
-       NetObject *mNextDirtyList;
+    static NetObject *mDirtyList;
+    NetObject *mPrevDirtyList;
+    NetObject *mNextDirtyList;
 
 This is a shock to me, does `NetObject` really track **all** dirty objects in scope for
 **anyone** in a static linked-list?  Well, perhaps its not so bad.  Objects only get pushed
@@ -108,4 +119,11 @@ use any.  A client clicks, an RPC is sent, and the server responds over time wit
 updates.  So onto ZAP...
 
 # ZAP
+
+There are two main loops which drive the game,
+[`ClientGame::idle`](https://github.com/kocubinski/opentnl/blob/master/zap/game.cpp#L406)
+ and 
+[`ServerGame::idle`](https://github.com/kocubinski/opentnl/blob/master/zap/game.cpp#L335R),
+which kick off the packet read/writes just as in TNLTest.  Movement processing starts in
+[`ControlObjectConnection::readPacket`](https://github.com/kocubinski/opentnl/blob/master/zap/controlObjectConnection.cpp#L132)
 
